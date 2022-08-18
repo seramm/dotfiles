@@ -20,12 +20,6 @@ nvim_tree.setup {
   hijack_directories = {
     enable = false,
   },
-  -- update_to_buf_dir = {
-  --   enable = false,
-  -- },
-  -- disable_netrw = true,
-  -- hijack_netrw = true,
-  -- open_on_setup = false,
   ignore_ft_on_setup = {
     "startify",
     "dashboard",
@@ -35,14 +29,7 @@ nvim_tree.setup {
     custom = { ".git" },
     exclude = { ".gitignore" },
   },
-  -- auto_close = true,
-  -- open_on_tab = false,
-  -- hijack_cursor = false,
   update_cwd = true,
-  -- update_to_buf_dir = {
-  --   enable = true,
-  --   auto_open = true,
-  -- },
   -- --   error
   -- --   info
   -- --   question
@@ -57,8 +44,9 @@ nvim_tree.setup {
     indent_markers = {
       enable = true,
       icons = {
-        corner = "└ ",
-        edge = "│ ",
+        corner = " └ ",
+        edge = " │ ",
+        item = " │ ",
         none = "  ",
       },
     },
