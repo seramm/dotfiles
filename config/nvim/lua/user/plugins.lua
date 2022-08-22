@@ -89,12 +89,13 @@ return packer.startup(function(use)
   }
   
   -- Keybindings
-
   use "folke/which-key.nvim"
 
   -- Color Schemes
   use "folke/tokyonight.nvim" 
-  
+
+  -- Buffer Bar
+ use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'} 
 
 
 
