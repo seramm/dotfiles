@@ -20,6 +20,13 @@ configs.setup{
         rainbow = {
                 enable = true,
                 extended_mode = false,
+                colors = {
+                        "Gold",
+                        "Orchid",
+                        "DodgerBlue",
+                        "Red",
+                },
+                disable = { "html" },
         }
 
 }

@@ -12,6 +12,7 @@ keymap("n", "<C-Space>", "<cmd>WhichKey<cr>", opts)
 
 
 -- Splits --
+keymap("n", "vv", "<cmd>vsplit<cr>", opts)
 -- Navigation 
 keymap("n", "<m-h>", "<C-w>h", opts)
 keymap("n", "<m-j>", "<C-w>j", opts)
