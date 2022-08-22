@@ -12,12 +12,21 @@ keymap("n", "<C-Space>", "<cmd>WhichKey<cr>", opts)
 
 
 -- Splits --
-keymap("n", "vv", "<cmd>vsplit<cr>", opts)
+keymap("n", "vvh", "<cmd>vnew<cr>", opts)
+keymap("n", "vvk", "<cmd>new<cr>", opts)
+keymap("n", "vvq", "<C-w>q", opts)
+
 -- Navigation 
 keymap("n", "<m-h>", "<C-w>h", opts)
 keymap("n", "<m-j>", "<C-w>j", opts)
 keymap("n", "<m-k>", "<C-w>k", opts)
 keymap("n", "<m-l>", "<C-w>l", opts)
+
+-- Resize
+keymap("n", "<C-Up>", ":resize -2<CR>", opts)
+keymap("n", "<C-Down>", ":resize +2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 
 -- Telescope -- 
