@@ -9,7 +9,7 @@ plugins = {
     marks = true,
     registers = true,
     spelling = {
-      enabled = false,
+      enabled = true,
       suggestions = 20,
     },
     presets = {
@@ -66,23 +66,17 @@ plugins = {
   noremap = true, -- use `noremap` when creating keymaps
   nowait = true, -- use `nowait` when creating keymaps
 }
+local mappings = {
+        b = { "<cmd>Telescope buffers<cr>", "Buffers" },
+        e = { "<cmd>NvimTreeToggle<cr>", "File Explorer"},
+        v = { "<cmd>vsplit<cr>", "Vertical Split"},
+        h = { "<cmd>split<cr>", "Horizontal Split"},
 
-local m_opts = {
-  mode = "n", -- NORMAL mode
-  prefix = "m",
-  buffer = nil, -- Global mappings. Specify a buffer number for buffer local mappings
-  silent = true, -- use `silent` when creating keymaps
-  noremap = true, -- use `noremap` when creating keymaps
-  nowait = true, -- use `nowait` when creating keymaps
-} 
-
-
+}
 
 
 
 
 
 which_key.setup(setup)
---which_key.register(mappings, opts)
---which_key.register(vmappings, vopts)
---which_key.register(m_mappings, m_opts)
+which_key.register(mappings, opts)

@@ -12,8 +12,6 @@ keymap("n", "<C-Space>", "<cmd>WhichKey<cr>", opts)
 
 
 -- Splits --
-keymap("n", "vvh", "<cmd>vnew<cr>", opts)
-keymap("n", "vvk", "<cmd>new<cr>", opts)
 keymap("n", "vvq", "<C-w>q", opts)
 
 -- Navigation 
@@ -36,7 +34,5 @@ keymap("n", "fg", "<cmd>Telescope live_grep<cr>", opts)
 keymap("n", "fb", "<cmd>Telescope buffers<cr>", opts)
 keymap("n", "fh", "<cmd>Telescope help_tags<cr>", opts)
 
--- Nvim Tree --
-keymap("n", "<Space>e", "<cmd>NvimTreeToggle<cr>", opts)
 
 return M
