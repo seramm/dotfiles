@@ -6,6 +6,7 @@ local options = {
   numberwidth = 4,
   title = true,
   scrolloff = 8,                        -- minimal number of characters left before the end of the window
+  mouse = "a",
   sidescrolloff = 8,
   smartindent = true,
 }
