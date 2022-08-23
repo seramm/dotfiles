@@ -9,11 +9,12 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 keymap("n", "<C-Space>", "<cmd>WhichKey<cr>", opts)
+keymap("n", "<Space>w", ":write<cr>", opts)
+--keymap("n", "<Space>d", ":q<cr>", opts)
 
 
 -- Splits --
 keymap("n", "vvq", "<C-w>q", opts)
-
 -- Navigation 
 keymap("n", "<m-h>", "<C-w>h", opts)
 keymap("n", "<m-j>", "<C-w>j", opts)
@@ -26,6 +27,9 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
+--Buffer--
+keymap("n", "<m-t>", ":tabnew %<cr>", opts)
+keymap("n", "<m-d>", ":tabclose<cr>", opts)
 
 -- Telescope -- 
 -- Find files using Telescope command-line sugar.
