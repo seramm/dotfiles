@@ -170,6 +170,11 @@ _G.packer_plugins = {
     path = "/home/seram/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
     url = "https://github.com/folke/tokyonight.nvim"
   },
+  ["vim-bbye"] = {
+    loaded = true,
+    path = "/home/seram/.local/share/nvim/site/pack/packer/start/vim-bbye",
+    url = "https://github.com/moll/vim-bbye"
+  },
   ["which-key.nvim"] = {
     loaded = true,
     path = "/home/seram/.local/share/nvim/site/pack/packer/start/which-key.nvim",
