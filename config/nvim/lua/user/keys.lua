@@ -27,9 +27,11 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
---Buffer--
+--Tabs--
 keymap("n", "<m-t>", ":tabnew %<cr>", opts)
 keymap("n", "<m-d>", ":tabclose<cr>", opts)
+keymap("n", "<C-l>", ":tabnext<cr>", opts)
+keymap("n", "<C-h>", ":tabprevious<cr>", opts)
 
 -- Telescope -- 
 -- Find files using Telescope command-line sugar.
