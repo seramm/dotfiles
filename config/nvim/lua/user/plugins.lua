@@ -50,7 +50,6 @@ return packer.startup(function(use)
   -- Plugins
   
 
-  use "windwp/nvim-autopairs"
   use "norcalli/nvim-colorizer.lua"
   use {
     'goolord/alpha-nvim',
@@ -58,6 +57,10 @@ return packer.startup(function(use)
         require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
   }
+
+  -- Syntax
+  use "windwp/nvim-autopairs"
+  use "abecodes/tabout.nvim"
 
   -- Treesitter
   use "nvim-treesitter/nvim-treesitter"

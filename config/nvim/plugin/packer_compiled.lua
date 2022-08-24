@@ -160,6 +160,11 @@ _G.packer_plugins = {
     path = "/home/seram/.local/share/nvim/site/pack/packer/start/plenary.nvim",
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
+  ["tabout.nvim"] = {
+    loaded = true,
+    path = "/home/seram/.local/share/nvim/site/pack/packer/start/tabout.nvim",
+    url = "https://github.com/abecodes/tabout.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/home/seram/.local/share/nvim/site/pack/packer/start/telescope.nvim",
