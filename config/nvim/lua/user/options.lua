@@ -7,8 +7,10 @@ local options = {
   title = true,
   scrolloff = 8,                        -- minimal number of characters left before the end of the window
   mouse = "a",
+  cursorline = true,
   sidescrolloff = 8,
   smartindent = true,
+  termguicolors = true,
 }
 
 for key, value in pairs(options) do
