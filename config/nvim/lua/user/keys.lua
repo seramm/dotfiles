@@ -33,6 +33,9 @@ keymap("n", "<m-d>", ":tabclose<cr>", opts)
 keymap("n", "<C-l>", ":tabnext<cr>", opts)
 keymap("n", "<C-h>", ":tabprevious<cr>", opts)
 
+--Buffers
+keymap("n", "H", ":bprev<cr>", opts)
+keymap("n", "L", ":bnext<cr>", opts)
 -- Telescope -- 
 -- Find files using Telescope command-line sugar.
 keymap("n", "ff", "<cmd>Telescope find_files<cr>", opts)
