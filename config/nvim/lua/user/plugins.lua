@@ -47,27 +47,31 @@ packer.init {
 return packer.startup(function(use)
   -- Plugin Mangager
   use "wbthomason/packer.nvim" -- Have packer manage itself
-  -- Plugins
-  
 
+
+  -- Plugins
   use "norcalli/nvim-colorizer.lua"
-  use {
-    'goolord/alpha-nvim',
+  use {'goolord/alpha-nvim',
     config = function ()
         require'alpha'.setup(require'alpha.themes.dashboard'.config)
     end
   }
+  use "kyazdani42/nvim-web-devicons"
+
 
   -- Syntax
   use "windwp/nvim-autopairs"
   use "abecodes/tabout.nvim"
 
+        
   -- Treesitter
   use "nvim-treesitter/nvim-treesitter"
   use "p00f/nvim-ts-rainbow"
   
+
   -- LSP
   use "neovim/nvim-lspconfig"
+
 
   --Completion
   use "christianchiarulli/nvim-cmp"
@@ -78,6 +82,7 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-emoji"
   use "hrsh7th/cmp-nvim-lua"
 
+
   -- Telescope
   use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -85,22 +90,22 @@ return packer.startup(function(use)
   requires = { {'nvim-lua/plenary.nvim'} }
   }
 
+
   -- Nvim Tree
-  use {
-  'kyazdani42/nvim-tree.lua',
-  requires = { {'kyazdani42/nvim-web-devicons'} }
-  }
+  use "kyazdani42/nvim-tree.lua"
   
+
   -- Keybindings
   use "folke/which-key.nvim"
+
 
   -- Color Schemes
   use "folke/tokyonight.nvim" 
 
-  -- Buffer Bar
- use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'} 
- use "moll/vim-bbye"
 
+  -- Buffer Bar
+ use {'akinsho/bufferline.nvim', tag = "v2.*"} 
+ use "moll/vim-bbye"
 
 
   -- Automatically set up your configuration after cloning packer.nvim
