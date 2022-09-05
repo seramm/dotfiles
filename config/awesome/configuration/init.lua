@@ -1,1 +1,1 @@
-require(".keys")
+require("configuration.keys")
