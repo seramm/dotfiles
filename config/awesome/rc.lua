@@ -23,7 +23,7 @@ require("awful.hotkeys_popup.keys")
 
 
 require("configuration")
-
+local apps = require("apps")
 -- {{{ Error handling
 -- Check if awesome encountered an error during startup and fell back to
 -- another config (This code will only ever execute for the fallback config)
@@ -54,13 +54,13 @@ beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
 myawesomemenu = {
    { "hotkeys", function() hotkeys_popup.show_help(nil, awful.screen.focused()) end },
    { "manual", apps.terminal .. " -e man awesome" },
-   { "edit config", editor_cmd .. " " .. awesome.conffile },
+   { "edit config", apps.editorcmd .. " " .. awesome.conffile },
    { "restart", awesome.restart },
    { "quit", function() awesome.quit() end },
 }
 
 mymainmenu = awful.menu({ items = { { "awesome", myawesomemenu, beautiful.awesome_icon },
-                                    { "open terminal", terminal }
+                                    { "open terminal", apps.terminal }
                                   }
                         })
 
@@ -68,7 +68,7 @@ mylauncher = awful.widget.launcher({ image = beautiful.awesome_icon,
                                      menu = mymainmenu })
 
 -- Menubar configuration
-menubar.utils.terminal = terminal -- Set the terminal for applications that require it
+menubar.utils.terminal = apps.terminal -- Set the terminal for applications that require it
 -- }}}
 
 -- {{{ Tag layout
