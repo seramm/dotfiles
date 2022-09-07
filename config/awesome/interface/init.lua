@@ -1,3 +1,5 @@
 require("interface.menu")
 require("interface.wibar")
 require("interface.layouts")
+require("interface.desktop")
+require("interface.notifications")
