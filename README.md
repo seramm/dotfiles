@@ -4,4 +4,5 @@
 - **OS:** Debian Bullseye / Manjaro
 - **Window Manager:** AwesomeWM
 - **Terminal:** Kitty
+- **Code editor:** Neovim
 
