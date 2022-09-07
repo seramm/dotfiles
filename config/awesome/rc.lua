@@ -23,7 +23,10 @@ require("awful.hotkeys_popup.keys")
 
 
 require("configuration")
+require("interface")
 local apps = require("apps")
+
+
 naughty.connect_signal("request::display_error", function(message, startup)
     naughty.notification {
         urgency = "critical",
@@ -31,8 +34,8 @@ naughty.connect_signal("request::display_error", function(message, startup)
         message = message
     }
 end)
-
-beautiful.init(gears.filesystem.get_themes_dir() .. "default/theme.lua")
+local themedir = gears.filesystem.get_configuration_dir() .. "interface/theme/"
+beautiful.init(themedir .. "theme.lua")
 
 
 
