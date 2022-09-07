@@ -24,41 +24,14 @@ require("awful.hotkeys_popup.keys")
 
 require("configuration")
 require("interface")
-local apps = require("apps")
 
 
-naughty.connect_signal("request::display_error", function(message, startup)
-    naughty.notification {
-        urgency = "critical",
-        title   = "Oops, an error happened"..(startup and " during startup!" or "!"),
-        message = message
-    }
-end)
 local themedir = gears.filesystem.get_configuration_dir() .. "interface/theme/"
 beautiful.init(themedir .. "theme.lua")
 
 
 
 
-
--- {{{ Notifications
-
-ruled.notification.connect_signal('request::rules', function()
-    -- All notifications will match this rule.
-    ruled.notification.append_rule {
-        rule       = { },
-        properties = {
-            screen           = awful.screen.preferred,
-            implicit_timeout = 5,
-        }
-    }
-end)
-
-naughty.connect_signal("request::display", function(n)
-    naughty.layout.box { notification = n }
-end)
-
--- }}}
 
 -- Enable sloppy focus, so that focus follows mouse.
 client.connect_signal("mouse::enter", function(c)
