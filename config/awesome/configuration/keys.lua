@@ -1,14 +1,12 @@
 local awful = require("awful")
-local menubar = require("menubar")
 local hotkeys_popup = require("awful.hotkeys_popup")
+local menubar = require("menubar")
 local variables = require("variables")
-
 
 modkey = "Mod4"
 altkey = "Mod1"
 ctrl = "Ctrl"
 shift = "Shift"
-
 
 awful.mouse.append_global_mousebindings({
     awful.button({ }, 3, function () mymainmenu:toggle() end),
