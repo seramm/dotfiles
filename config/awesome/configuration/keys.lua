@@ -19,7 +19,7 @@ awful.keyboard.append_global_keybindings({
               {description="show help", group="awesome"}),
     awful.key({ modkey }, "w", function () mymainmenu:show() end,
               {description = "show main menu", group = "awesome"}),
-    awful.key({ modkey, shift }, "r", awesome.restart,
+    awful.key({ modkey, altkey }, "r", awesome.restart,
               {description = "reload awesome", group = "awesome"}),
     awful.key({ modkey, shift }, "q", awesome.quit,
               {description = "quit awesome", group = "awesome"}),
@@ -216,8 +216,6 @@ client.connect_signal("request::default_keybindings", function()
                 {description = "toggle keep on top", group = "client"}),
         awful.key({ modkey }, "n",
             function (c)
-                -- The client currently has the input focus, so it cannot be
-                -- minimized, since minimized clients can't have the focus.
                 c.minimized = true
             end ,
             {description = "minimize", group = "client"}),
