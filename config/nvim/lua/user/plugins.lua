@@ -81,7 +81,11 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-emoji"
   use "hrsh7th/cmp-nvim-lua"
+  use "saadparwaiz1/cmp_luasnip"
 
+  --Snippet
+  use "L3MON4D3/LuaSnip"
+  use"rafamadriz/friendly-snippets"
 
   -- Telescope
   use {
