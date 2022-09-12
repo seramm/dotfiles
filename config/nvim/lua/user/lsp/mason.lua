@@ -15,7 +15,8 @@ local servers = {
   "marksman",
   "pyright",
   "sqlls",
-  "taplo"
+  "taplo",
+  "luaformatter"
 }
 
 local settings = {
