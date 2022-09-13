@@ -57,6 +57,7 @@ return packer.startup(function(use)
     end
   }
   use "kyazdani42/nvim-web-devicons"
+  use "akinsho/toggleterm.nvim"
 
 
   -- Syntax
