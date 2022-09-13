@@ -1,7 +1,7 @@
 local awful = require("awful")
 local wibox = require("wibox")
 
-client.connect_signal("request::titlebars", function(c)
+--[[client.connect_signal("request::titlebars", function(c)
     -- buttons for the titlebar
     local buttons = {
         awful.button({ }, 1, function()
@@ -36,4 +36,4 @@ client.connect_signal("request::titlebars", function(c)
         },
         layout = wibox.layout.align.horizontal
     }
-end)
+end)  ]]
