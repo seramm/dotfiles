@@ -33,7 +33,7 @@ awful.keyboard.append_global_keybindings({
                   }
               end,
               {description = "lua execute prompt", group = "awesome"}),
-    awful.key({ modkey, shift }, "c", function (c) c:kill() end,
+    awful.key({ modkey, shift }, "c", function () client.focus:kill() end,
               {description = "close", group = "awesome"}),
     awful.key({ modkey }, "Return", function() awful.spawn(variables.apps.terminal) end,
               {description = "open a terminal", group = "launcher"}),
