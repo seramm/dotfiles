@@ -1,7 +1,9 @@
 local options = {
   cmdheight = 1,
   showtabline = 0,			-- always see tab lines
-  expandtab = true,                     -- insert 2 spaces for a tab
+  expandtab = true,                     
+  shiftwidth = 2,
+  tabstop = 2,
   number = true,			-- see lines' number
   numberwidth = 4,
   title = true,
