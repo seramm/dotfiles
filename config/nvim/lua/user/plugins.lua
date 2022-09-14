@@ -114,9 +114,10 @@ return packer.startup(function(use)
   use "folke/tokyonight.nvim" 
 
 
-  -- Buffer Bar
- use {'akinsho/bufferline.nvim', tag = "v2.*"} 
- use "moll/vim-bbye"
+  -- UI
+  use {'akinsho/bufferline.nvim', tag = "v2.*"} 
+  use "moll/vim-bbye"
+  use "nvim-lualine/lualine.nvim"
 
 
   -- Automatically set up your configuration after cloning packer.nvim
