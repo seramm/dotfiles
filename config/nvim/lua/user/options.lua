@@ -13,6 +13,7 @@ local options = {
   sidescrolloff = 8,
   smartindent = true,
   termguicolors = true,
+  wrap = false,
 }
 
 for key, value in pairs(options) do
