@@ -125,6 +125,7 @@ awful.keyboard.append_global_keybindings({
             if tag then
                 tag:view_only()
             end
+            client.emit_signal("tag::switched")
         end,
     },
     awful.key {
