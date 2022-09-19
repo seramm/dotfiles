@@ -70,7 +70,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
   s.mywibox = awful.wibar {
     position = "top",
     screen   = s,
-    bg = beautiful.bg_normal .. "45",
+    bg = beautiful.bg_normal .. "55",
     widget   = {
       layout = wibox.layout.align.horizontal,
       { -- Left widgets
