@@ -47,6 +47,11 @@ ruled.client.connect_signal("request::rules", function()
       rule       = { class = "KeePassXC" },
       properties = { tag = screen[1].tags[7] },
     }
+    ruled.client.append_rule {
+      rule       = { class = "thunderbird" },
+      properties = { tag = screen[1].tags[5] },
+    }
+
     
     ruled.client.append_rule {
       rule       = { class = "Yubico Authenticator" },
