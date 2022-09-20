@@ -15,34 +15,40 @@ awful.mouse.append_global_mousebindings({
 })
 -- General Awesome keys
 awful.keyboard.append_global_keybindings({
-    awful.key({ modkey }, "s", hotkeys_popup.show_help,
-              {description="show help", group="awesome"}),
-    awful.key({ modkey }, "w", function () mymainmenu:show() end,
-              {description = "show main menu", group = "awesome"}),
-    awful.key({ modkey, shift }, "r", awesome.restart,
-              {description = "reload awesome", group = "awesome"}),
-    awful.key({ modkey, shift }, "q", awesome.quit,
-              {description = "quit awesome", group = "awesome"}),
-    awful.key({ modkey }, "x",
-              function ()
-                  awful.prompt.run {
-                    prompt       = "Run Lua code: ",
-                    textbox      = awful.screen.focused().mypromptbox.widget,
-                    exe_callback = awful.util.eval,
-                    history_path = awful.util.get_cache_dir() .. "/history_eval"
-                  }
-              end,
-              {description = "lua execute prompt", group = "awesome"}),
-    awful.key({ modkey, shift }, "c", function () client.focus:kill() end,
-              {description = "close", group = "awesome"}),
-    awful.key({ modkey }, "Return", function() awful.spawn(variables.apps.terminal) end,
-              {description = "open a terminal", group = "launcher"}),
-    awful.key({ modkey }, "r", function() awful.spawn(variables.apps.runner) end,
-              {description = "open Rofi", group = "launcher"}),
-    awful.key({ modkey, altkey }, "r", function() awful.screen.focused().mypromptbox:run() end,
-              {description = "run prompt", group = "launcher"}),
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"}),
+  awful.key({ modkey }, "s", hotkeys_popup.show_help,
+            {description="show help", group="awesome"}),
+  awful.key({ modkey }, "w", function () mymainmenu:show() end,
+            {description = "show main menu", group = "awesome"}),
+  awful.key({ modkey, shift }, "r", awesome.restart,
+            {description = "reload awesome", group = "awesome"}),
+  awful.key({ modkey, shift }, "q", awesome.quit,
+            {description = "quit awesome", group = "awesome"}),
+  awful.key({ modkey }, "x",
+            function ()
+                awful.prompt.run {
+                  prompt       = "Run Lua code: ",
+                  textbox      = awful.screen.focused().mypromptbox.widget,
+                  exe_callback = awful.util.eval,
+                  history_path = awful.util.get_cache_dir() .. "/history_eval"
+                }
+            end,
+            {description = "lua execute prompt", group = "awesome"}),
+  awful.key({ modkey, shift }, "c", function () client.focus:kill() end,
+            {description = "close", group = "awesome"}),
+  awful.key({ modkey }, "Return", function() awful.spawn(variables.apps.terminal) end,
+            {description = "open a terminal", group = "launcher"}),
+  awful.key({ modkey }, "r", function() awful.spawn(variables.apps.runner) end,
+            {description = "open Rofi", group = "launcher"}),
+  awful.key({ modkey, altkey }, "r", function() awful.screen.focused().mypromptbox:run() end,
+            {description = "run prompt", group = "launcher"}),
+  awful.key({ modkey }, "p", function() menubar.show() end,
+            {description = "show the menubar", group = "launcher"}),
+  awful.key({}, "XF86AudioLowerVolume", function() awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ -2%") end,
+            { description = "lower volume", group = "System"}),
+  awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +2%") end,
+            { description = "raise volume", group = "System"}),
+
+  
 })
 
 -- Tags related keybindings
