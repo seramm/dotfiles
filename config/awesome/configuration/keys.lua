@@ -47,6 +47,10 @@ awful.keyboard.append_global_keybindings({
             { description = "lower volume", group = "System"}),
   awful.key({}, "XF86AudioRaiseVolume", function() awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ +2%") end,
             { description = "raise volume", group = "System"}),
+  awful.key({}, "XF86MonBrightnessDown", function() awful.spawn("brightnessctl set 10%-") end,
+            {description = "lower brightness", group = "System"}),
+  awful.key({}, "XF86MonBrightnessUp", function() awful.spawn("brightnessctl set +10%") end,
+            {description = "raise brightness", group = "System"}),
 
   
 })
