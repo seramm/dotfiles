@@ -5,7 +5,7 @@ end
 
 
 configs.setup{
-        ensure_installed = {"bash", "c", "java", "javascript", "lua", "python", "sql", "vim", "yaml"},
+        ensure_installed = {"bash", "c", "cpp", "java", "javascript", "lua", "python", "sql", "vim", "yaml"},
         sysnc_install = false, 
         ignore_install = { "" },
         highlight = {
