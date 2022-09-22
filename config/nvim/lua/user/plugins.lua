@@ -102,8 +102,8 @@ return packer.startup(function(use)
 
 
   -- Nvim Tree
-  use "kyazdani42/nvim-tree.lua"
-  
+  use({"kyazdani42/nvim-tree.lua", commit = "3676e0b124c2a132857e2bbcf7f48f05228f1052"})
+
 
   -- Keybindings
   use "folke/which-key.nvim"
