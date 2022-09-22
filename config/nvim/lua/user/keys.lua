@@ -13,7 +13,6 @@ keymap("n", "<Space>w", ":write<cr>", opts)
 
 
 -- Splits --
-keymap("n", "vvq", "<C-w>q", opts)
 -- Navigation 
 keymap("n", "<m-h>", "<C-w>h", opts)
 keymap("n", "<m-j>", "<C-w>j", opts)
