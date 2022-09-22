@@ -13,7 +13,6 @@ local servers = {
   "clangd",
   "clang-format",
   "lua-language-server",
-  "luaformatter",
   "marksman",
   "pyright",
 }
