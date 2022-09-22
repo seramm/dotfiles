@@ -12,7 +12,6 @@ end
 local servers = {
   "clangd",
   "clang-format",
-  "cpptools",
   "lua-language-server",
   "luaformatter",
   "marksman",
