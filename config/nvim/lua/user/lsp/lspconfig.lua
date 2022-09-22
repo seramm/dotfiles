@@ -31,6 +31,9 @@ local on_attach = function(client, bufnr)
 	if client.name == "sumneko_lua" then
 		client.resolved_capabilities.document_formatting = false
 	end
+	if client.name == "clangd" then
+		client.resolved_capabilities.document_formatting = false
+	end
 end
 
 protocol.CompletionItemKind = {
@@ -63,6 +66,7 @@ protocol.CompletionItemKind = {
 
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require("cmp_nvim_lsp").update_capabilities(vim.lsp.protocol.make_client_capabilities())
+capabilities.offsetEncoding = { "utf-16" }
 
 nvim_lsp.clangd.setup({
 	on_attach = on_attach,
