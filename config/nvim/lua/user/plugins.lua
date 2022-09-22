@@ -74,8 +74,7 @@ return packer.startup(function(use)
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig"
-  use "ray-x/lsp_signature.nvim"
-  use "jose-elias-alvarez/null-ls.nvim"
+--  use "ray-x/lsp_signature.nvim"
   use "RRethy/vim-illuminate"
 
 
