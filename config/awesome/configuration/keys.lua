@@ -53,8 +53,6 @@ awful.keyboard.append_global_keybindings({
             {description = "lower brightness", group = "System"}),
   awful.key({}, "XF86MonBrightnessUp", function() awful.spawn("brightnessctl set +10%") end,
             {description = "raise brightness", group = "System"}),
-
-  
 })
 
 -- Tags related keybindings
