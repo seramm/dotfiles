@@ -1,6 +1,5 @@
 local awful = require("awful")
 local ruled = require("ruled")
-local wibox = require("wibox")
 
 
 -- Rules to apply to new clients.
