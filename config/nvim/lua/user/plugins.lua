@@ -58,26 +58,23 @@ return packer.startup(function(use)
   }
   use "kyazdani42/nvim-web-devicons"
   use "akinsho/toggleterm.nvim"
-
+  use "lewis6991/impatient.nvim"
 
   -- Syntax
   use "windwp/nvim-autopairs"
   use "abecodes/tabout.nvim"
 
-        
   -- Treesitter
   use "nvim-treesitter/nvim-treesitter"
   use "p00f/nvim-ts-rainbow"
-  
 
   -- LSP
   use "williamboman/mason.nvim"
   use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig"
---  use "ray-x/lsp_signature.nvim"
+  --use "ray-x/lsp_signature.nvim"
   use "RRethy/vim-illuminate"
   use "jose-elias-alvarez/null-ls.nvim"
-
 
   --Completion
   use "christianchiarulli/nvim-cmp"
@@ -89,33 +86,24 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lua"
   use "saadparwaiz1/cmp_luasnip"
 
-
   --Snippet
   use "L3MON4D3/LuaSnip"
   use"rafamadriz/friendly-snippets"
 
   -- Telescope
-  use {
-  'nvim-telescope/telescope.nvim', tag = '0.1.0',
-  -- or                       , branch = '0.1.x',
-  requires = { {'nvim-lua/plenary.nvim'} }
-  }
-
+  use {'nvim-telescope/telescope.nvim', tag = '0.1.0', requires = { {'nvim-lua/plenary.nvim'} } }
 
   -- Nvim Tree
   use({"kyazdani42/nvim-tree.lua", commit = "3676e0b124c2a132857e2bbcf7f48f05228f1052"})
 
-
   -- Keybindings
   use "folke/which-key.nvim"
 
-
-  -- Color Schemes
-  use "folke/tokyonight.nvim" 
-
+  -- Color Scheme
+  use "folke/tokyonight.nvim"
 
   -- UI
-  use {'akinsho/bufferline.nvim', tag = "v2.*"} 
+  use {'akinsho/bufferline.nvim', tag = "v2.*"}
   use "moll/vim-bbye"
   use "nvim-lualine/lualine.nvim"
 
