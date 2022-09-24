@@ -1,6 +1,6 @@
+require "user.plugins"
 require "user.options"
 require "user.keys"
-require "user.plugins"
 require "user.cmp"
 require "user.treesitter"
 require "user.autopairs"
