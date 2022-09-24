@@ -51,11 +51,7 @@ return packer.startup(function(use)
 
   -- Plugins
   use "norcalli/nvim-colorizer.lua"
-  use {'goolord/alpha-nvim',
-    config = function ()
-        require'alpha'.setup(require'alpha.themes.dashboard'.config)
-    end
-  }
+  use "goolord/alpha-nvim"
   use "kyazdani42/nvim-web-devicons"
   use "akinsho/toggleterm.nvim"
   use "lewis6991/impatient.nvim"
