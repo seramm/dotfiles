@@ -1,6 +1,5 @@
 local awful = require("awful")
 local beautiful = require("beautiful")
-local gears = require("gears")
 local wibox = require("wibox")
 
 local modkey = "Mod4"
@@ -9,7 +8,10 @@ local modkey = "Mod4"
 mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- Create a textclock widget
-mytextclock = wibox.widget.textclock()
+mytextclock = {
+  font = "Mononoki Nerd Font 9",
+  widget = wibox.widget.textclock()
+}
 
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
