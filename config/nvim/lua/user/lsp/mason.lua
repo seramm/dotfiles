@@ -15,6 +15,7 @@ local servers = {
   "lua-language-server",
   "marksman",
   "pyright",
+  "arduino-language-server",
 }
 
 local settings = {
