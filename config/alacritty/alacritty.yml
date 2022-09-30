@@ -81,22 +81,22 @@ window:
 # Font configuration
 font:
   normal:
-    family: Hack Nerd Mont Mono
+    family: Hack Nerd Font Mono
     style: Regular
   bold:
-    family: Hack Nerd Mont Mono Bold
+    family: Hack Nerd Font Mono
     style: Bold
   italic:
-    family: Hack Nerd Mont Mono Italic
+    family: Hack Nerd Font Mono
     style: Italic
   bold_italic:
-    family: Hack Nerd Mont Mono Bold Italic
+    family: Hack Nerd Font Mono
     style: Bold Italic
 
   size: 7.0
 
   offset:
-    x: 1
+    x: 0
     y: 0
 
 
