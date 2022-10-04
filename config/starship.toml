@@ -9,7 +9,6 @@ scan_timeout = 10
 # Disable the blank line at the start of the prompt
 add_newline = false
 
-# Disable the package module, hiding it from the prompt completely
 [battery]
 full_symbol = "🔋"
 charging_symbol = "🔌"
@@ -17,7 +16,15 @@ discharging_symbol = "⚡"
 
 [[battery.display]]
 threshold = 100
+style = "bold green"
+
+[[battery.display]]
+threshold = 20
 style = "bold red"
+
+
+[c]
+
 
 [cmd_duration]
 disabled = true
