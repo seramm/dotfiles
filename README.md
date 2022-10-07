@@ -1,8 +1,8 @@
 # Dotfiles
 
 ## <samp>OS Information</samp>
-- **OS:** Debian Bullseye / Archlinux
+- **OS:** ArcoLinuxS
 - **Window Manager:** AwesomeWM
-- **Terminal:** Kitty
-- **Code editor:** Neovim v0.7.2 (compiled from source)
+- **Terminal:** Kitty and Alacritty
+- **Code editor:** Neovim v0.8.0 (compiled from source)
 
