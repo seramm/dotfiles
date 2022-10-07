@@ -29,10 +29,10 @@ local on_attach = function(client, bufnr)
 	--buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 	vim.cmd([[ command! Format execut 'lua vim.lsp.buf.formatting()']])
 	if client.name == "sumneko_lua" then
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.document_formatting = false
 	end
 	if client.name == "clangd" then
-		client.resolved_capabilities.document_formatting = false
+		client.server_capabilities.document_formatting = false
 	end
 end
 
