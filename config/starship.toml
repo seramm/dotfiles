@@ -1,6 +1,6 @@
 
 format = """
-(bold green)$directory$git_status$c$lua $fill $battery$time
+(bold green)$username $directory$git_status$c$lua $fill $battery$time
 [❯](bold green) """
 
 # Wait 10 milliseconds for starship to check files under the current directory.
@@ -46,3 +46,10 @@ disabled = true
 disabled = false
 format = '[\[ $time \]]($style)'
 time_format = "%H:%M"
+
+[username]
+style_user = "blue bold"
+style_root = "black bold"
+format = "[$user]($style)"
+disabled = false
+show_always = true
