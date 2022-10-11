@@ -49,6 +49,7 @@ theme.menu_border_width = dpi(1)
 
 -- WiBAR
 theme.wibar_margins = dpi(5)
+theme.wibar_height = dpi(25)
 
 
 -- Define the image to load
