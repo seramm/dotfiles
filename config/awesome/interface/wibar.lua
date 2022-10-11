@@ -8,9 +8,9 @@ local modkey = "Mod4"
 --mykeyboardlayout = awful.widget.keyboardlayout()
 
 -- Create a textclock widget
-mytextclock = {
-  font = "Mononoki Nerd Font 9",
-  widget = wibox.widget.textclock()
+local mytextclock = {
+  font = "Mononoki Nerd Font 10",
+  widget = wibox.widget.textclock('%d-%m-%y - %H:%M  ')
 }
 
 screen.connect_signal("request::desktop_decoration", function(s)
