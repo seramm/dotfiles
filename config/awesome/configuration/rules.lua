@@ -55,7 +55,6 @@ ruled.client.connect_signal("request::rules", function()
       properties = { tag = screen[1].tags[4] },
     }
 
-    
     ruled.client.append_rule {
       rule       = { class = "Yubico Authenticator" },
       properties = {
@@ -63,6 +62,16 @@ ruled.client.connect_signal("request::rules", function()
         ontop     = true,
         placement = awful.placement.centered,
         width     = 350,
+        height    = 600,
+        },
+    }
+    ruled.client.append_rule {
+      rule       = { class = "Qalculate-gtk" },
+      properties = {
+        floating  = true,
+        ontop     = true,
+        placement = awful.placement.centered,
+        width     = 550,
         height    = 600,
         },
     }
