@@ -10,14 +10,14 @@ local modkey = "Mod4"
 -- Create a textclock widget
 local mytextclock = {
   font = "Mononoki Nerd Font 10",
-  widget = wibox.widget.textclock('%d-%m-%y - %H:%M  ')
+  widget = wibox.widget.textclock(' %d-%m-%y - %H:%M  ')
 }
 
 screen.connect_signal("request::desktop_decoration", function(s)
     -- Each screen has its own tag table.
   local names = { "", "", "", "", "", "", "" }
   local l = awful.layout.suit
-  local layouts = { l.tile, l.tile, l.magnifier, l.tile, l.tile, l.tile, l.tile}
+  local layouts = { l.tile, l.magnifier, l.magnifier, l.tile, l.tile, l.tile, l.tile}
   awful.tag(names, s, layouts)
 
   -- Create a promptbox for each screen
