@@ -8,4 +8,3 @@ beautiful.init(gears.filesystem.get_configuration_dir() .. "interface/theme/them
 require("configuration")
 require("interface")
 require("autostart")
-
