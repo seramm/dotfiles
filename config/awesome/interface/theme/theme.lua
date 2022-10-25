@@ -47,11 +47,6 @@ theme.menu_width  = dpi(100)
 theme.menu_border_width = dpi(1)
 
 
--- WiBAR
-theme.wibar_margins = dpi(5)
-theme.wibar_height = dpi(25)
-
-
 -- Define the image to load
 theme.titlebar_close_button_normal = themes_path.."default/titlebar/close_normal.png"
 theme.titlebar_close_button_focus  = themes_path.."default/titlebar/close_focus.png"
