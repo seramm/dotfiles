@@ -27,7 +27,7 @@ local on_attach = function(client, bufnr)
 	--buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
 	buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	--buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-	vim.cmd([[ command! Format execut 'lua vim.lsp.buf.formatting()']])
+	vim.cmd([[ command! Format execut 'lua vim.lsp.buf.format {async = true}']])
 	if client.name == "sumneko_lua" then
 		client.server_capabilities.document_formatting = false
 	end
