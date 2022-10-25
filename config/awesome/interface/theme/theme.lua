@@ -79,7 +79,7 @@ theme.wallpaper = config_path.."interface/theme/wallpaper.png"
 -- You can use your own layout icons like this:
 theme.layout_fairh = themes_path.."default/layouts/fairhw.png"
 theme.layout_fairv = themes_path.."default/layouts/fairvw.png"
-theme.layout_floating  = themes_path.."default/layouts/floatingw.png"
+theme.layout_floating  = config_path.."interface/theme/layouts/floating.png"
 theme.layout_magnifier = config_path .. "interface/theme/layouts/magnifier.png"
 theme.layout_max = themes_path.."default/layouts/maxw.png"
 theme.layout_fullscreen = themes_path.."default/layouts/fullscreenw.png"
