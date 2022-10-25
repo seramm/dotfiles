@@ -11,8 +11,7 @@ end
 
 local servers = {
   "clangd",
-  "clang-format",
-  "lua-language-server",
+  "summeko_lua",
   "marksman",
   "pyright",
   "arduino-language-server",

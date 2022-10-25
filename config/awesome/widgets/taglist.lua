@@ -2,7 +2,6 @@ local awful = require("awful")
 local gears = require("gears")
 local wibox = require("wibox")
 local dpi = require("beautiful").xresources.apply_dpi
-require("handler.icon")
 
 local modkey = "Mod4"
 local list_update = function(widget, buttons, label, data, objects)
