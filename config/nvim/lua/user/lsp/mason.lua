@@ -9,14 +9,6 @@ if not status_ok_1 then
 end
 
 
-local servers = {
-  "clangd",
-  "summeko_lua",
-  "marksman",
-  "pyright",
-  "arduino-language-server",
-}
-
 local settings = {
     ui = {
         check_outdated_packages_on_open = true,
@@ -43,5 +35,5 @@ local settings = {
 
 mason.setup(settings)
 mason_lspconfig.setup{
-  ensure_installed = servers,
+  ensure_installed = {},
 }
