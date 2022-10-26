@@ -112,7 +112,6 @@ ex ()
 }
 
 eval "$(starship init bash)"
-neofetch | lolcat
 
 alias testawesome='Xephyr :5 & sleep 1 ; DISPLAY=:5 awesome'
 alias tre='tree -C'
