@@ -17,6 +17,7 @@ local list_update = function(widget, buttons, label, data, objects)
             align = "center",
             valign = "center",
             visible = true,
+            font = "Iosevka Nerd Font Mono Bold 12",
             forced_width = dpi(25),
             id = "label",
             widget = wibox.widget.textbox
