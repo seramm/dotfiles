@@ -42,4 +42,12 @@ keymap("n", "fb", "<cmd>Telescope buffers<cr>", opts)
 keymap("n", "fh", "<cmd>Telescope help_tags<cr>", opts)
 
 
+-- ToggleTerm --
+keymap('t', '<esc>', [[<C-\><C-n>]], opts)
+--keymap('t', 'jk', [[<C-\><C-n>]], opts)
+keymap('t', '<m-h>', [[<Cmd>wincmd h<CR>]], opts)
+keymap('t', '<m-j>', [[<Cmd>wincmd j<CR>]], opts)
+keymap('t', '<m-k>', [[<Cmd>wincmd k<CR>]], opts)
+keymap('t', '<m-l>', [[<Cmd>wincmd l<CR>]], opts)
+
 return M
