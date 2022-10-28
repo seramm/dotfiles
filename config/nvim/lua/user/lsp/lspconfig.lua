@@ -80,25 +80,25 @@ nvim_lsp.sumneko_lua.setup({
 		Lua = {
 			diagnostics = {
 				globals = {
-          "vim",
-          "use",
-          --AwesomeWm
-          "awesome",
-          "client",
-          "root",
-          "screen",
-          "tag",
-        },
+					"vim",
+					"use",
+					--AwesomeWm
+					"awesome",
+					"client",
+					"root",
+					"screen",
+					"tag",
+				},
 			},
 
 			workspace = {
 				-- Make the server aware of Neovim runtime files
 				library = {
-          vim.api.nvim_get_runtime_file("", true),
-          ['/usr/share/nvim/runtime/lua'] = true,
-          ['/usr/share/nvim/runtime/lua/lsp'] = true,
-          ['/usr/share/awesome/lib'] = true,
-        },
+					vim.api.nvim_get_runtime_file("", true),
+					["/usr/share/nvim/runtime/lua"] = true,
+					["/usr/share/nvim/runtime/lua/lsp"] = true,
+					["/usr/share/awesome/lib"] = true,
+				},
 				checkThirdParty = false,
 			},
 		},
