@@ -11,6 +11,8 @@ keymap("n", "<C-Space>", "<cmd>WhichKey<cr>", opts)
 keymap("n", "<Space>w", ":write<cr>", opts)
 --keymap("n", "<Space>d", ":q<cr>", opts)
 
+keymap("n", "<CR>", "o<Esc>k", opts)
+keymap("n", "<S-Enter>", "O<Esc>j", opts)
 
 -- Splits --
 -- Navigation 
