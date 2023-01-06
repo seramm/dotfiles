@@ -6,6 +6,7 @@ local wibox = require("wibox")
 
 local configdir = gears.filesystem.get_configuration_dir()
 local icondir = configdir .. "interface/theme/icons/"
+local scriptdir = configdir .. "helpers/hdd.sh"
 
 return function()
   local hdd_widget = wibox.widget {
@@ -52,15 +53,10 @@ return function()
     widget = wibox.container.background
   }
 
-  watch(configdir .. "helpers/hdd.sh",
+  watch(scriptdir,
     3,
     function(_, stdout)
-      if stdout ~= nil then
-        hdd_widget.container.hdd_layout.label.text = "No ED"
-      else
-        hdd_widget.container.hdd_layout.label.text = stdout
-      end
-      print(hdd_widget.container.hdd_layout.label.text)
+      hdd_widget.container.hdd_layout.label.text = stdout
     end
   )
   return hdd_widget
