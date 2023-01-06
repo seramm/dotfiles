@@ -1,4 +1,4 @@
-local helpers = require("helpers")
+local helpers = require("helpers.helpers")
 local awful = require("awful")
 local fylesystem = require("gears.filesystem")
 local config_dir = fylesystem.get_configuration_dir()
