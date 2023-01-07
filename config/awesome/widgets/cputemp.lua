@@ -69,8 +69,9 @@ return function()
       for i, core in ipairs(cores) do
         avg = avg + core
       end
+      local average = avg / 4
 
-      cputemp_widget.container.cputemp_layout.label.text = tostring(string.format("%.1f", avg / 4) .. "ºC"):gsub(",", ".")
+      cputemp_widget.container.cputemp_layout.label.text = tostring(string.format("%.1f", average) .. "ºC"):gsub(",", ".")
     end
   )
 
