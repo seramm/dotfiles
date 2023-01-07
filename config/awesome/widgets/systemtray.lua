@@ -1,4 +1,3 @@
-local awful = require("awful")
 local dpi = require("beautiful").xresources.apply_dpi
 local gears = require("gears")
 local wibox = require("wibox")
