@@ -16,8 +16,9 @@ awful.screen.connect_for_each_screen(function(s)
   s.systray = require("widgets.systemtray")(s)
   s.memory = require("widgets.memory")()
   s.hdd = require("widgets.hdd")()
+  s.cputemp = require("widgets.cputemp")()
 
   require("interface.bar.leftbar")(s, {s.layoutbox, s.taglist})
-  require("interface.bar.rightbar")(s, {s.hdd, s.memory, s.systray, s.clock})
+  require("interface.bar.rightbar")(s, {s.cputemp, s.hdd, s.memory, s.systray, s.clock})
 end)
 
