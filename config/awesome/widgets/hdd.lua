@@ -8,6 +8,11 @@ local configdir = gears.filesystem.get_configuration_dir()
 local icondir = configdir .. "interface/theme/icons/"
 local scriptdir = configdir .. "helpers/hdd.sh"
 
+local colors = {
+  nodisk = "#e86e56",
+  default = "#00ff83",
+}
+
 return function()
   local hdd_widget = wibox.widget {
     {
@@ -45,8 +50,7 @@ return function()
       right = dpi(8),
       widget = wibox.container.margin
     },
-    bg = "#3A475C",
-    fg = "#ffffff",
+    fg = "#282c34",
     shape = function(cr, width, height)
       gears.shape.rounded_rect(cr, width, height, 5)
     end,
@@ -56,7 +60,13 @@ return function()
   watch(scriptdir,
     3,
     function(_, stdout)
-      hdd_widget.container.hdd_layout.label.text = stdout
+      stdout = string.gsub(stdout, "\n", "")
+      if stdout:match("nodisk") then
+        hdd_widget.container.hdd_layout.label.text = "No disk"
+      else
+        hdd_widget.container.hdd_layout.label.text = stdout
+      end
+      hdd_widget.bg = colors[stdout] or colors.default
     end
   )
   return hdd_widget

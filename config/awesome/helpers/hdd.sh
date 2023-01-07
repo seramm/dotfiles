@@ -7,7 +7,7 @@ device_dir=$(echo "$device_info" | grep -o 'sd[a-z][0-9]')
 
 if [ -z "$device_dir" ]
   then 
-    echo "No Disk"
+    echo "nodisk"
   else
     echo "$device_dir"
 fi
