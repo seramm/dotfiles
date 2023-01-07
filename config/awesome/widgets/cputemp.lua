@@ -57,22 +57,20 @@ return function()
     [[ bash -c "sensors | grep Core | awk '{print $3}'" ]],
     3,
     function(_, stdout)
-      local cores = {core0 = 0, core1 = 0, core2 = 0, core3 = 0}
+      local cores = {}
       local avg = 0
-      for i, line in stdout:gmatch("[^\n]+") do
-        cores[i] = line
-      end
-      for i, core in ipairs(cores) do
-        print(cores[i])
-        core = core:gsub("+", "")
-        core = core:gsub("ºC", "")
-        cores[i] = core
+      print(stdout)
+      for line in stdout:gmatch("[^\n]+") do
+        line = line:gsub("+", "")
+        line = string.sub(line, 1, -3)
+        print(tonumber(string.match(line, "%d-%.%d+")))
+        table.insert(cores, tonumber(string.match(line, "%d-%.%d+")))
       end
       for i, core in ipairs(cores) do
         avg = avg + core
       end
 
-      cputemp_widget.container.cputemp_layout.label.text = tostring(string.format("%.1f", avg / 4) .. " ºC"):gsub(",", ".")
+      cputemp_widget.container.cputemp_layout.label.text = tostring(string.format("%.1f", avg / 4) .. "ºC"):gsub(",", ".")
     end
   )
 
