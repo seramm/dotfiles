@@ -72,19 +72,15 @@ return function()
     widget = wibox.container.background
   }
 
-  --Hover_signal(ram_widget, color["Red200"], color["Grey900"])
-
   watch(
     [[ bash -c "sensors | grep Core | awk '{print $3}'" ]],
     3,
     function(_, stdout)
       local cores = {}
       local avg = 0
-      print(stdout)
       for line in stdout:gmatch("[^\n]+") do
         line = line:gsub("+", "")
         line = string.sub(line, 1, -3)
-        print(tonumber(string.match(line, "%d-%.%d+")))
         table.insert(cores, tonumber(string.match(line, "%d-%.%d+")))
       end
       for i, core in ipairs(cores) do
