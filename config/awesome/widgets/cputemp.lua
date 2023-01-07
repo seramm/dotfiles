@@ -39,10 +39,10 @@ return function()
           {
             {
               id = "bar",
-              forced_width = dpi(5),
-              max_value = 1,
               color = "#00ff83",
+              max_value = 1,
               background_color = "#282c34",
+              forced_width = dpi(5),
               shape = gears.shape.rounded_bar,
               widget = wibox.widget.progressbar,
             },
