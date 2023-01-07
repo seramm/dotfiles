@@ -14,7 +14,7 @@ return function()
           {
             {
               id = "icon",
-              image = icondir .. "memory.png",
+              image = icondir .. "cpu.png",
               resize = true,
               forced_height = dpi(28),
               forced_width = dpi(28),
