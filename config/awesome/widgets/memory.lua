@@ -12,36 +12,63 @@ return function()
       {
         {
           {
-            {
-              id = "icon",
-              image = icondir .. "memory.png",
-              resize = true,
-              forced_height = dpi(30),
-              forced_width = dpi(30),
-              widget = wibox.widget.imagebox,
-            },
-            id = "icon_layout",
-            widget = wibox.container.place
+            id = "bar",
+            max_value = 1,
+            color = "#00ff83",
+            background_color = "#282c34",
+            forced_height = dpi(5),
+            shape = gears.shape.rounded_bar,
+            widget = wibox.widget.progressbar
           },
-          top = dpi(2),
-          widget = wibox.container.margin,
-          id = "icon_margin"
+          id = "place",
+          valign = "top",
+          forced_height = dpi(5),
+          forced_width = dpi(10),
+          widget = wibox.container.place
         },
-        spacing = dpi(7),
-        {
-          id = "label",
-          align = "center",
-          valign = "center",
-          font = "Iosevka Nerd Font Mono Bold 10",
-          widget = wibox.widget.textbox
-        },
-        id = "ram_layout",
-        layout = wibox.layout.fixed.horizontal
+        id = "margin",
+        top = dpi(2),
+        left = dpi(8),
+        right = dpi(8),
+        widget = wibox.container.margin
       },
-      id = "container",
-      left = dpi(8),
-      right = dpi(8),
-      widget = wibox.container.margin
+      {
+        {
+          {
+            {
+              {
+                id = "icon",
+                image = icondir .. "memory.png",
+                resize = true,
+                forced_height = dpi(28),
+                forced_width = dpi(28),
+                widget = wibox.widget.imagebox,
+              },
+              id = "icon_layout",
+              widget = wibox.container.place
+            },
+            top = dpi(2),
+            widget = wibox.container.margin,
+            id = "icon_margin"
+          },
+          spacing = dpi(7),
+          {
+            id = "label",
+            align = "center",
+            valign = "center",
+            font = "Iosevka Nerd Font Mono Bold 10",
+            widget = wibox.widget.textbox
+          },
+          id = "ram_layout",
+          layout = wibox.layout.fixed.horizontal
+        },
+        id = "container",
+        left = dpi(8),
+        right = dpi(8),
+        widget = wibox.container.margin
+      },
+      id = "stack",
+      widget = wibox.layout.stack
     },
     bg = "#3A475C",
     fg = "#ffffff",
@@ -59,8 +86,11 @@ return function()
     function(_, stdout)
 
       local MemTotal, MemFree, MemAvailable = stdout:match("(%d+)\n(%d+)\n(%d+)\n")
+      --ram_widget.stack.container.ram_layout.label.text = tostring(string.format("%.1f", ((MemTotal - MemAvailable) / 1024 / 1024)) .. " GB"):gsub(",", ".")
 
-      ram_widget.container.ram_layout.label.text = tostring(string.format("%.1f", ((MemTotal - MemAvailable) / 1024 / 1024)) .. " GB"):gsub(",", ".")
+      local MemInUse = MemTotal - MemAvailable
+      ram_widget.stack.container.ram_layout.label.text = tostring(string.format("%.1f", MemInUse / 1024^2) .. " GB"):gsub(",", ".")
+      ram_widget.stack.margin.place.bar:set_value(MemInUse / MemTotal)
     end
   )
 
