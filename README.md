@@ -2,7 +2,7 @@
 
 ## <samp>OS Information</samp>
 - **OS:** [ArcoLinuxS](https://arcolinux.com/)
-- **Window Manager:** AwesomeWM git version (config is normally stable, however it can return unexpected errors)
+- **Window Manager:** AwesomeWM git version (config is normally stable, however it can return unexpected errors). Most of the config is from [Crylia's theme](https://github.com/Crylia/crylia-theme), make sure to check it out.
 - **Compositor:** [Picom (jonaburg's fork)](https://github.com/jonaburg/picom)
 - **Terminal:** [Kitty(main)](https://sw.kovidgoyal.net/kitty/) and Alacritty (working on getting rid of Alacritty and switching to a terminal without GPU-acceleration to have a back-up)
 - **Shell:** [Bash](https://tiswww.case.edu/php/chet/bash/bashtop.html)
