@@ -35,6 +35,27 @@ return function()
           font = "Iosevka Nerd Font Mono Bold 10",
           widget = wibox.widget.textbox
         },
+        {
+          {
+            {
+              id = "bar",
+              forced_width = dpi(5),
+              max_value = 1,
+              color = "#00ff83",
+              background_color = "#282c34",
+              shape = gears.shape.rounded_bar,
+              widget = wibox.widget.progressbar,
+            },
+            id = "rotate",
+            forced_width = dpi(5),
+            direction = "east",
+            layout = wibox.container.rotate,
+          },
+        id = "margin",
+        top = dpi(2),
+        bottom = dpi(2),
+        widget = wibox.container.margin
+        },
         id = "cputemp_layout",
         layout = wibox.layout.fixed.horizontal
       },
@@ -72,6 +93,7 @@ return function()
       local average = avg / 4
 
       cputemp_widget.container.cputemp_layout.label.text = tostring(string.format("%.1f", average) .. "ºC"):gsub(",", ".")
+      cputemp_widget.container.cputemp_layout.margin.rotate.bar:set_value(average / 100)
     end
   )
 
