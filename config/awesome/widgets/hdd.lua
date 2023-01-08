@@ -21,10 +21,10 @@ return function()
           {
             {
               id = "icon",
-              image = icondir .. "memory.png",
+              image = icondir .. "hdd.png",
               resize = true,
-              forced_height = dpi(30),
-              forced_width = dpi(30),
+              forced_height = dpi(28),
+              forced_width = dpi(28),
               widget = wibox.widget.imagebox,
             },
             id = "icon_layout",
