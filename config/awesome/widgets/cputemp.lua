@@ -64,7 +64,8 @@ return function()
       right = dpi(8),
       widget = wibox.container.margin
     },
-    bg = "#189ad3",
+    --bg = "#189ad3",
+    bg = "#7992d0",
     fg = "#ffffff",
     shape = function(cr, width, height)
       gears.shape.rounded_rect(cr, width, height, 5)

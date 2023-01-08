@@ -61,7 +61,7 @@ local list_update = function(widget, buttons, label, data, objects)
 
     tag_widget.container.margin.label:set_text(object.index)
     if object.urgent == true then
-      tag_widget:set_bg("#fb2e01")
+      tag_widget:set_bg("#e86e56")
       tag_widget:set_fg("#88909d")
     elseif object == awful.screen.focused().selected_tag then
       tag_widget:set_bg("#ffffff")
