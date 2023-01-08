@@ -70,7 +70,7 @@ return function()
       id = "stack",
       widget = wibox.layout.stack
     },
-    bg = "#3A475C",
+    bg = "#b967ff",
     fg = "#ffffff",
     shape = function(cr, width, height)
       gears.shape.rounded_rect(cr, width, height, 5)
