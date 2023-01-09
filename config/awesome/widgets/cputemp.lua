@@ -39,7 +39,20 @@ return function()
           {
             {
               id = "bar",
-              color = "#00ff83",
+              --color = "#00ff83",
+              color = {
+                type = "linear",
+                from = { 0, 0},
+                to = { 30, 0},
+                stops = {
+                  { 0, "#00ff83"},
+                  { 0.45, "#00ff83"},
+                  { 0.45, "#ffbf00"},
+                  { 0.6, "#ffbf00"},
+                  { 0.6, "#ff0000"},
+                  { 1, "#ff0000"}
+                }
+              },
               max_value = 1,
               background_color = "#282c34",
               forced_width = dpi(5),
@@ -91,6 +104,14 @@ return function()
 
       cputemp_widget.container.cputemp_layout.label.text = tostring(string.format("%.1f", average) .. "ºC"):gsub(",", ".")
       cputemp_widget.container.cputemp_layout.margin.rotate.bar:set_value(average / 100)
+      --[[if average < 45 then
+        cputemp_widget.container.cputemp_layout.margin.rotate.bar.color = "#00ff83"
+      elseif average >= 45 and average < 50  then
+        cputemp_widget.container.cputemp_layout.margin.rotate.bar.color = "#ffbf00"
+      elseif average >= 50 then
+        cputemp_widget.container.cputemp_layout.margin.rotate.bar.color = "#cc3300"
+      end
+      ]]
     end
   )
 
