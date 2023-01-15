@@ -1,4 +1,3 @@
-a
 # Dotfiles
 
 ## <samp>OS Information</samp>
