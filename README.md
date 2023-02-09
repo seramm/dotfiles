@@ -7,7 +7,7 @@
 - **Terminal:** Alacritty (working on getting a non GPU-acceleration terminal to have a back-up)
 - **Shell:** [Bash](https://tiswww.case.edu/php/chet/bash/bashtop.html)
 - **Launcher:** [Rofi](https://github.com/davatorium/rofi)
-- **Code editor:** [Neovim v0.8.0 (compiled from source)](https://github.com/neovim/neovim) (I hardly ever made any change or worry about any possible errors so expect some errors)
+- **Code editor:** [Neovim v0.8.3 (compiled from source)](https://github.com/neovim/neovim) (I hardly ever made any change or worry about any possible errors so expect some errors)
 
 ## Screenshots
 ![Desktop](./images/desktop.png)
