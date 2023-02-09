@@ -68,12 +68,6 @@ protocol.CompletionItemKind = {
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.offsetEncoding = { "utf-16" }
 
-nvim_lsp.clangd.setup({
-	on_attach = on_attach,
-	filetypes = { "c", "cpp" },
-	capabilities = capabilities,
-})
-
 nvim_lsp.sumneko_lua.setup({
 	on_attach = on_attach,
 	settings = {
