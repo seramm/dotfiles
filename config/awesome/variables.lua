@@ -1,6 +1,6 @@
 return{
   apps = {
-  terminal = "kitty",
+  terminal = "alacritty",
   runner = "rofi -show run",
   screenshot = "flameshot gui",
   applauncher = "rofi -show run",
