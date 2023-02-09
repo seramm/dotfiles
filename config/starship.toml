@@ -1,7 +1,7 @@
 
 format = """
-(bold green)$username $directory$git_status$c$lua $fill $battery$time
-[❯](bold green) """
+(bold green)$username $directory$git_status$c$lua
+$battery[❯](bold green) """
 
 # Wait 10 milliseconds for starship to check files under the current directory.
 scan_timeout = 10
@@ -41,11 +41,6 @@ detect_folders = ["lua"]
 
 [package]
 disabled = true
-
-[time]
-disabled = false
-format = '[\[ $time \]]($style)'
-time_format = "%H:%M"
 
 [username]
 style_user = "blue bold"
