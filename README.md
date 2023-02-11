@@ -1,6 +1,5 @@
 # Dotfiles
 
-
 ## <samp>OS Information</samp>
 - **OS:** [ArcoLinuxS](https://arcolinux.com/)
 - **Window Manager:** AwesomeWM git version (config is normally stable, however it can return unexpected errors). Most of the config is from [Crylia's theme](https://github.com/Crylia/crylia-theme), make sure to check it out.
