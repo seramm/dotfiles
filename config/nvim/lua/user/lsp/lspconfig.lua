@@ -31,9 +31,6 @@ local on_attach = function(client, bufnr)
 	if client.name == "sumneko_lua" then
 		client.server_capabilities.document_formatting = false
 	end
-	if client.name == "clangd" then
-		client.server_capabilities.document_formatting = false
-	end
 end
 
 protocol.CompletionItemKind = {
