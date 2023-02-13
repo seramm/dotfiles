@@ -43,6 +43,8 @@ awful.keyboard.append_global_keybindings({
             {description = "run prompt", group = "launcher"}),
   awful.key({ modkey }, "p", function() menubar.show() end,
             {description = "show the menubar", group = "launcher"}),
+  awful.key({}, "Print", function() awful.spawn("flameshot gui") end,
+            { description = "make screenshot", group = "System"}),
   awful.key({}, "XF86AudioMute", function() awful.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle") end,
             { description = "mute volume", group = "System"}),
   awful.key({}, "XF86AudioLowerVolume", function() awful.spawn("pactl set-sink-volume @DEFAULT_SINK@ -2%") end,
