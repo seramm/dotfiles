@@ -65,7 +65,7 @@ protocol.CompletionItemKind = {
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.offsetEncoding = { "utf-16" }
 
-nvim_lsp.lus_ls.setup({
+nvim_lsp.lua_ls.setup({
 	on_attach = on_attach,
 	settings = {
 		Lua = {
