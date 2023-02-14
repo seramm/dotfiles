@@ -28,7 +28,7 @@ local on_attach = function(client, bufnr)
 	buf_set_keymap("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>", opts)
 	--buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 	vim.cmd([[ command! Format execut 'lua vim.lsp.buf.format {async = true}']])
-	if client.name == "sumneko_lua" then
+	if client.name == "lua_ls" then
 		client.server_capabilities.document_formatting = false
 	end
 end
@@ -65,7 +65,7 @@ protocol.CompletionItemKind = {
 local capabilities = require("cmp_nvim_lsp").default_capabilities(vim.lsp.protocol.make_client_capabilities())
 capabilities.offsetEncoding = { "utf-16" }
 
-nvim_lsp.sumneko_lua.setup({
+nvim_lsp.lus_ls.setup({
 	on_attach = on_attach,
 	settings = {
 		Lua = {
