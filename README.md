@@ -9,6 +9,7 @@
 - **Launcher:** [Rofi](https://github.com/davatorium/rofi)
 - **Code editor:** [Neovim v0.8.3 (compiled from source)](https://github.com/neovim/neovim) (I hardly ever made any change or worry about any possible errors so expect some errors)
 
+
 ## Screenshots
 ![Desktop](./images/desktop.png)
 ![Tile](./images/tile.png)
