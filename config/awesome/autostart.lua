@@ -14,8 +14,10 @@ local function autostart()
     awful.spawn("nm-applet", false)
   end)
 
+  helpers.run_once("blueberry-tray", function()
+    awful.spawn("blueberry-tray", false)
+  end)
 
-
-end 
+end
 
 autostart()
