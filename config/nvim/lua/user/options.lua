@@ -1,7 +1,7 @@
 local options = {
   cmdheight = 1,
   showtabline = 0,			-- always see tab lines
-  expandtab = true,                     
+  expandtab = true,
   shiftwidth = 2,
   tabstop = 2,
   number = true,			-- see lines' number
