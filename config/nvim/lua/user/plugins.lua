@@ -56,6 +56,9 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "lewis6991/impatient.nvim"
 
+  --LaTex
+  use "lervag/vimtex"
+
   -- Syntax
   use "windwp/nvim-autopairs"
   use "abecodes/tabout.nvim"
