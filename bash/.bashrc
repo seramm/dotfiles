@@ -117,3 +117,6 @@ alias testawesome='Xephyr :5 & sleep 1 ; DISPLAY=:5 awesome'
 alias tre='tree -C'
 alias s="kitty +kitten ssh"
 alias lvim='/home/seram/.local/bin/lvim'
+
+export EDITOR="/usr/local/bin/nvim"
+export BROWSER="/usr/bin/librewolf"
