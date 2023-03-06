@@ -31,6 +31,9 @@ local on_attach = function(client, bufnr)
 	if client.name == "lua_ls" then
 		client.server_capabilities.document_formatting = false
 	end
+	if client.name == "texlab" then
+		client.server_capabilities.document_formatting = false
+	end
 end
 
 protocol.CompletionItemKind = {
@@ -91,6 +94,36 @@ nvim_lsp.lua_ls.setup({
 					["/usr/share/awesome/lib"] = true,
 				},
 				checkThirdParty = false,
+			},
+		},
+	},
+})
+
+nvim_lsp.texlab.setup({
+	on_attach = on_attach,
+  filestypes = {"tex", "plaintex", "bib"},
+	settings = {
+		texlab = {
+			auxDirectory = ".",
+			bibtexFormatter = "texlab",
+			build = {
+				args = { "-pdf", "-interaction=nonstopmode", "-synctex=1", "%f" },
+				executable = "latexmk",
+				forwardSearchAfter = false,
+				onSave = false,
+			},
+			chktex = {
+				onEdit = false,
+				onOpenAndSave = false,
+			},
+			diagnosticsDelay = 300,
+			formatterLineLength = 80,
+			forwardSearch = {
+				args = {},
+			},
+			latexFormatter = "latexindent",
+			latexindent = {
+				modifyLineBreaks = false,
 			},
 		},
 	},
