@@ -26,6 +26,12 @@ local header0 = {
 }
 
 dashboard.section.header.val = header0
-dashboard.section.buttons.val = {}
+dashboard.section.buttons.val = {
+  dashboard.button("e", "  >  New file", ":ene <BAR> starinsert <CR>"),
+  dashboard.button("q", "󰅚  >  Quit NeoVim", ":qa<CR>"),
+
+}
+
+dashboard.config.opts.noautocmd = true
 
 alpha.setup(dashboard.opts)
