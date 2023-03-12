@@ -3,7 +3,7 @@ if not status_ok then
   return
 end
 
-local status_ok1, dashboard = pcall(require, "dashboard")
+local status_ok1, dashboard = pcall(require, "alpha.themes.dashboard")
 if not status_ok1 then
   return
 end
