@@ -8,4 +8,24 @@ if not status_ok1 then
   return
 end
 
-alpha.setup(dashboard.config)
+local header0 = {
+  -- https://patorjk.com/software/taag/#p=display&h=2&v=0&f=ANSI%20Shadow&t=neovim
+  "                                                  ",
+  "                                                  ",
+  "                                                  ",
+  "                                                  ",
+  "███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗",
+  "████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║",
+  "██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║",
+  "██║╚██╗██║██╔══╝  ██║   ██║╚██╗ ██╔╝██║██║╚██╔╝██║",
+  "██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║",
+  "╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝",
+  "                                                  ",
+  "                                                  ",
+  "                    Never :qa!                    ",
+}
+
+dashboard.section.header.val = header0
+dashboard.section.buttons.val = {}
+
+alpha.setup(dashboard.opts)
