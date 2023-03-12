@@ -22,4 +22,4 @@ for key, value in pairs(options) do
 end
 
 
-vim.cmd[[colorscheme tokyonight]]
+vim.cmd[[colorscheme tokyonight-night]]
