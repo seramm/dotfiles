@@ -1,6 +1,6 @@
 
 format = """
-(bold green)$username $git_branch $directory$git_status$c$lua
+(bold green)$username $directory$git_branch$git_status$c$lua
 $battery[❯](bold green) """
 
 # Wait 10 milliseconds for starship to check files under the current directory.
