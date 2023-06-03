@@ -118,5 +118,12 @@ alias tre='tree -C'
 alias s="kitty +kitten ssh"
 alias lvim='/home/seram/.local/bin/lvim'
 
+# El nano
+
+alias alonso='sudo nano'
+alias fernando='sudo nano'
+alias alo='sudo nano'
+alias elnano='sudo nano'
+
 export EDITOR="/usr/local/bin/nvim"
 export BROWSER="/usr/bin/librewolf"
