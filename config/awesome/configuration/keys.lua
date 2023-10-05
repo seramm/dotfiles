@@ -80,13 +80,10 @@ awful.keyboard.append_global_keybindings({
         end,
         {description = "focus previous by index", group = "client"}),
 
--- Not needed for the moment
---[[
     awful.key({ modkey, ctrl }, "j", function () awful.screen.focus_relative( 1) end,
               {description = "focus the next screen", group = "screen"}),
     awful.key({ modkey, ctrl }, "k", function () awful.screen.focus_relative(-1) end,
               {description = "focus the previous screen", group = "screen"}),
---]]
     awful.key({ modkey, ctrl }, "n",
               function ()
                   local c = awful.client.restore()

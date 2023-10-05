@@ -56,7 +56,7 @@ ruled.client.connect_signal("request::rules", function()
     }
 
     ruled.client.append_rule {
-      rule       = { class = "Yubico Authenticator" },
+      rule       = { class = "Yubioath" },
       properties = {
         floating  = true,
         ontop     = true,

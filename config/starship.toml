@@ -1,6 +1,6 @@
 
 format = """
-(bold green)$username $directory$git_status$c$lua
+(bold green)$username $directory$git_branch$git_status$git_metrics$c$lua
 $battery[❯](bold green) """
 
 # Wait 10 milliseconds for starship to check files under the current directory.
@@ -48,3 +48,6 @@ style_root = "black bold"
 format = "[$user]($style)"
 disabled = false
 show_always = true
+
+[git_metrics]
+disabled = false

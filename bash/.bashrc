@@ -118,5 +118,17 @@ alias tre='tree -C'
 alias s="kitty +kitten ssh"
 alias lvim='/home/seram/.local/bin/lvim'
 
+# El nano
+
+alias alonso='sudo nano'
+alias fernando='sudo nano'
+alias alo='sudo nano'
+alias elnano='sudo nano'
+
 export EDITOR="/usr/local/bin/nvim"
-export BROWSER="/usr/bin/librewolf"
+
+
+# GPGAgent
+export GPG_TTY="$(tty)"
+export SSH_AUTH_SOCK="/run/user/$UID/gnupg/S.gpg-agent.ssh"
+gpg-connect-agent updatestartuptty /bye > /dev/null
