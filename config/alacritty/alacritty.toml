@@ -1,8 +1,10 @@
 [colors.primary]
 background = "#282c34"
-cursor = "#686b70"
 foreground = "#bbc2cf"
-text = "CellForeground"
+
+[colors.cursor]
+text = "#686b70"
+cursor = "CellForeground"
 
 [env]
 TERM = "alacritty"
