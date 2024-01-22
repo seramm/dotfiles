@@ -6,7 +6,7 @@
 	helper = !/usr/bin/gh auth git-credential
 [user]
 	email = sergioaramburu@tutanota.com
-	name = Sergio Aramburu
+	name = seramm
 	signingkey = 71FD25533F5E97CF
 [commit]
 	gpgSign = true
