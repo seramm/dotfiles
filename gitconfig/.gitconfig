@@ -24,3 +24,10 @@
   adog = log --all --decorate --oneline --graph
   cb = branch -vv
   st = status
+
+  wdiff = diff --word-diff
+	pushf = push --force-with-lease --force-if-includes
+	rc = rebase --continue
+	ds = diff --staged
+	rs = restore --staged
+  fix = commit -p --amend --no-edit
