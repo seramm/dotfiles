@@ -5,7 +5,7 @@
 	helper = 
 	helper = !/usr/bin/gh auth git-credential
 [user]
-	email = sergioaramburu@tutanota.com
+	email = seram@tuta.com
 	name = seramm
 	signingkey = 71FD25533F5E97CF
 [commit]
@@ -31,3 +31,6 @@
 	ds = diff --staged
 	rs = restore --staged
   fix = commit -p --amend --no-edit
+  ahead = log --branches --not --remotes --simplify-by-decoration --graph --oneline
+  master = !basename $(git rev-parse --abbrev-ref origin/HEAD)
+	lpr = !git log --oneline --graph $(git rev-parse --abbrev-ref @{u} 2>/dev/null) $(git merge-base origin/$(git master) HEAD)..HEAD
